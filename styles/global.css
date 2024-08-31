@@ -27,8 +27,10 @@ blockquote {
 
 a {
   color: inherit;
+  display: block;
 }
 
 img {
   width: 100%;
 }
+
