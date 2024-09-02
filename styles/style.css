@@ -206,8 +206,8 @@
   line-height: 26px;
   text-decoration-line: underline;
   text-transform: uppercase;
-  color: white;
   text-underline-offset: 4px;
+  color: white;
   z-index: 1;
 }
 
