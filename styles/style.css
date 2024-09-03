@@ -3,8 +3,7 @@
   align-items: center;
   grid-template-columns: 1fr min-content 1fr;
   width: 1052px;
-  height: 105px;
-  margin: 92px 24px 96px;
+  margin: 95px 24px 93px;
   font-size: 18px;
   font-weight: 400;
   text-underline-offset: 4px;
@@ -24,6 +23,11 @@
   list-style: none;
 }
 
+.link_active {
+  pointer-events: none;
+  text-decoration: none;
+}
+
 .header__links-list-item {
   list-style: circle;
 }
@@ -34,17 +38,20 @@
   height: 104.65px;
 }
 
+.address {
+  font-style: normal;
+  line-height: 24px;
+}
+
 .header_address {
   justify-self: end;
   padding-right: 61px;
-  font-style: normal;
-  line-height: 24px;
 }
 
 .cover {
   position: relative;
   width: 1100px;
-  height: 757px;
+  min-height: 757px;
   background-size: cover;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
@@ -53,21 +60,20 @@
 
 .overlay {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-color: rgb(0 0 0 / 0.6);
 }
 
 .cover__title {
-  position: absolute;
-  z-index: 1;
-  width: 1000px;
-  height: 355px;
-  margin: 165px 50px 237px;
+  position: relative;
+  padding-top: 165px;
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 124px;
   font-weight: 700;
   font-size: 100px;
-  line-height: 124px;
   letter-spacing: 0.3em;
+  z-index: 1;
   text-transform: uppercase;
   color: white;
 }
@@ -95,15 +101,14 @@
 }
 
 .cover__description {
-  position: absolute;
   display: flex;
+  position: relative;
   z-index: 1;
-  width: 100%;
   justify-content: space-around;
   align-items: center;
-  padding: 0px 50px 48px 74px;
+  padding: 0px 50px 0px 74px;
+  margin-top: 120px;
   column-gap: 80px;
-  margin-top: 655px;
 }
 
 .cover__description-text {
@@ -118,8 +123,8 @@
   width: 256px;
   height: 51px;
   background: transparent;
-  border: 1px 0px 0px;
-  border-color: white;
+  border: 1px solid white;
+  font-family: Raleway, sans-serif;
 }
 
 .button-content {
@@ -136,8 +141,7 @@
   display: flex;
   flex-direction: column;
   width: 1052px;
-  height: 692px;
-  margin-top: 179px;
+  margin-top: 180px;
   margin-left: 24px;
 }
 
@@ -151,14 +155,16 @@
 
 .lots__card-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
   margin-top: 27px;
-  justify-content: space-between;
   list-style: none;
 }
 
 .lots__card-list-item {
   width: 334px;
-  height: 563px;
+  min-height: 563px;
+  flex-grow: 1;
 }
 
 .card-link {
@@ -173,28 +179,21 @@
   position: relative;
   flex-direction: column;
   justify-content: space-between;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
 }
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  z-index: 1;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 100%;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 100%;
 }
 
 .card__title {
@@ -222,8 +221,9 @@
 }
 
 .lots__look-more-link {
-  padding-left: 40px;
-  padding-top: 30px;
+  margin-left: 40px;
+  margin-top: 30px;
+  max-width: fit-content;
   font-weight: 400;
   font-size: 20px;
   color: black;
@@ -235,7 +235,6 @@
   grid-template-columns: 334px 2fr;
   column-gap: 25px;
   width: 1052px;
-  height: 595px;
   margin-left: 24px;
   margin-top: 146px;
   justify-items: center;
@@ -258,7 +257,7 @@
 }
 
 .about__column {
-  width: 693px;
+  max-width: 693px;
 }
 
 .about__title {
@@ -283,26 +282,20 @@
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 180px 50px 88px;
+  margin: 181px 50px 88px;
   width: 1000px;
-  height: 98px;
   font-size: 18px;
   font-weight: 400;
   color: black;
   text-underline-offset: 4px;
 }
 
-.address {
-  font-style: normal;
-  line-height: 24px;
+.footer__menu {
+  text-align: center;
 }
 
 .footer__menu-list {
   list-style: none;
-}
-
-.footer__menu {
-  text-align: center;
 }
 
 .footer__social-list {
